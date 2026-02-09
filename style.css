@@ -1,0 +1,159 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial;
+   background: #f4f4f4;
+}
+
+.container {
+   max-width: 1100px;
+   margin: auto;
+   padding: 20px;
+}
+
+h1 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+h2 {
+   margin: 20px 0 10px;
+}
+
+ 
+
+form {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 15px;
+   margin-bottom: 20px;
+   background: white;
+   padding: 15px;
+   border-radius: 6px;
+}
+
+input,
+button {
+   padding: 12px;
+   font-size: 14px;
+}
+
+button {
+   background: blue;
+   color: white;
+   border: none;
+   cursor: pointer;
+   grid-column: span 3;
+}
+
+ 
+
+.table-container {
+   width: 100%;
+}
+
+table {
+   width: 100%;
+   background: white;
+   border-collapse: collapse;
+}
+
+th,
+td {
+   border: 1px solid #ddd;
+   padding: 10px;
+   text-align: center;
+}
+
+ 
+
+@media (max-width: 992px) {
+   form {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   button {
+      grid-column: span 2;
+   }
+}
+
+ 
+
+@media (max-width: 600px) {
+
+   form {
+      grid-template-columns: 1fr;
+   }
+
+   button {
+      grid-column: span 1;
+   }
+
+   table,
+   thead,
+   tbody,
+   th,
+   td,
+   tr {
+      display: block;
+      width: 100%;
+   }
+
+   thead {
+      display: none;
+   }
+
+   tr {
+      background: white;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+   }
+
+   td {
+      text-align: left;
+      border: none;
+      padding: 8px 10px;
+      position: relative;
+   }
+
+   td::before {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 3px;
+      color: #333;
+   }
+
+   td:nth-child(1)::before {
+      content: "Name";
+   }
+
+   td:nth-child(2)::before {
+      content: "Email";
+   }
+
+   td:nth-child(3)::before {
+      content: "Roll";
+   }
+
+   td:nth-child(4)::before {
+      content: "Total";
+   }
+
+   td:nth-child(5)::before {
+      content: "Percentage";
+   }
+
+   td:nth-child(6)::before {
+      content: "Actions";
+   }
+
+   td button {
+      margin-top: 5px;
+   }
+}

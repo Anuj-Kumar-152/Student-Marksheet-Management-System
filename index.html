@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Student Marksheet Management</title>
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+   <div class="container">
+
+      <h1>Student Marksheet Management System</h1>
+
+    
+      <form id="studentForm">
+         <input type="text" id="username" placeholder="Name" required />
+         <input type="email" id="email" placeholder="Email" required />
+         <input type="text" id="rollNumber" placeholder="Roll Number" required />
+
+         <input type="number" id="physics" placeholder="Physics" required />
+         <input type="number" id="chemistry" placeholder="Chemistry" required />
+         <input type="number" id="maths" placeholder="Maths" required />
+         <input type="number" id="hindi" placeholder="Hindi" required />
+         <input type="number" id="english" placeholder="English" required />
+
+         <button type="submit" id="submit">Add Student</button>
+      </form>
+
+    
+      <h2>Students List</h2>
+
+      <div class="table-container">
+         <table>
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Roll</th>
+                  <th>Total</th>
+                  <th>Percentage</th>
+                  <th>Actions</th>
+               </tr>
+            </thead>
+            <tbody id="studentTable"></tbody>
+         </table>
+      </div>
+
+   </div>
+
+   <script src="script.js"></script>
+</body>
+
+</html>
